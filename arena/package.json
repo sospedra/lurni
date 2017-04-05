@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lurni.math": "^1.0.1"
+    "lurni.math": "^1.1.0"
   }
 }
