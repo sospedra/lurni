@@ -1,6 +1,6 @@
 {
   "name": "lurni.math",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "lurni.add": "0.0.2",
-    "lurni.sub": "0.0.2"
+    "lurni.sub": "^1.1.0"
   }
 }
