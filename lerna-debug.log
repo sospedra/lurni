@@ -1,0 +1,146 @@
+lerna(verbose) GitUtilities.isInitialized    ()
+lerna(verbose) GitUtilities.isInitialized    () => true
+lerna(verbose) GitUtilities.getTopLevelDirectory()
+lerna(verbose) GitUtilities.getTopLevelDirectory() => "."
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json")
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json") => true
+lerna(verbose) FileSystemUtilities.readFileSync("./lerna.json")
+lerna(verbose) FileSystemUtilities.readFileSync("./lerna.json") => "{\n  \"lerna\": \"2.0.0-beta.38\",\n  \"packages\": [\n    \"packages/*\"\n  ],\n  \"version\": \"0.0.0\"\n}"
+lerna(verbose) FileSystemUtilities.existsSync("./package.json")
+lerna(verbose) FileSystemUtilities.existsSync("./package.json") => true
+lerna(verbose) FileSystemUtilities.readFileSync("./package.json")
+lerna(verbose) FileSystemUtilities.readFileSync("./package.json") => "{\n  \"devDependencies\": {\n    \"lerna\": \"2.0.0-beta.38\"\n  }\n}"
+lerna(info)    Lerna v2.0.0-beta.38
+lerna(verbose) FileSystemUtilities.existsSync("./package.json")
+lerna(verbose) FileSystemUtilities.existsSync("./package.json") => true
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json")
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json") => true
+lerna(verbose) FileSystemUtilities.existsSync("./VERSION")
+lerna(verbose) FileSystemUtilities.existsSync("./VERSION") => false
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.add/package.json")
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.add/package.json") => true
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.sub/package.json")
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.sub/package.json") => true
+lerna(verbose) Attempting running PublishCommand.initialize
+lerna(verbose) GitUtilities.getCurrentBranchDescription()
+lerna(verbose) GitUtilities.getCurrentBranchDescription() => "master"
+lerna(info)    Current version: 0.0.0
+lerna(info)    Checking for updated packages...
+lerna(verbose) GitUtilities.hasTags          ()
+lerna(verbose) GitUtilities.hasTags          () => false
+lerna(info)    No tags found! Comparing with initial commit.
+lerna(info)    Changes:
+lerna(info)    - lurni.add: 1.0.0 => 0.0.1
+- lurni.sub: 1.0.0 => 0.0.1
+lerna(verbose) Successfully ran PublishCommand.initialize
+lerna(verbose) Attempting running PublishCommand.execute
+lerna(verbose) FileSystemUtilities.writeFileSync("./lerna.json", "{\n  \"lerna\": \"2.0.0-beta.38\",\n  \"packages\": [\n    \"packages/*\"\n  ],\n  ...)
+lerna(verbose) FileSystemUtilities.writeFileSync("./lerna.json", "{\n  \"lerna\": \"2.0.0-beta.38\",\n  \"packages\": [\n    \"packages/*\"\n  ],\n  ...) => 
+lerna(verbose) GitUtilities.addFile          ("./lerna.json")
+lerna(verbose) GitUtilities.addFile          ("./lerna.json") => 
+lerna(verbose) FileSystemUtilities.writeFileSync("./packages/lurni.add/package.json", "{\n  \"name\": \"lurni.add\",\n  \"version\": \"0.0.1\",\n  \"...)
+lerna(verbose) FileSystemUtilities.writeFileSync("./packages/lurni.add/package.json", "{\n  \"name\": \"lurni.add\",\n  \"version\": \"0.0.1\",\n  \"...) => 
+lerna(verbose) FileSystemUtilities.writeFileSync("./packages/lurni.sub/package.json", "{\n  \"name\": \"lurni.sub\",\n  \"version\": \"0.0.1\",\n  \"...)
+lerna(verbose) FileSystemUtilities.writeFileSync("./packages/lurni.sub/package.json", "{\n  \"name\": \"lurni.sub\",\n  \"version\": \"0.0.1\",\n  \"...) => 
+lerna(verbose) GitUtilities.addFile          ("./packages/lurni.add/package.json", 0, ["./packages/lurni.add/package.json","/Users/mars/labs/lerna...)
+lerna(verbose) GitUtilities.addFile          ("./packages/lurni.add/package.json", 0, ["./packages/lurni.add/package.json","/Users/mars/labs/lerna...) => 
+lerna(verbose) GitUtilities.addFile          ("./packages/lurni.sub/package.json", 1, ["./packages/lurni.add/package.json","/Users/mars/labs/lerna...)
+lerna(verbose) GitUtilities.addFile          ("./packages/lurni.sub/package.json", 1, ["./packages/lurni.add/package.json","/Users/mars/labs/lerna...) => 
+lerna(verbose) GitUtilities.commit           ("v0.0.1")
+lerna(verbose) GitUtilities.commit           ("v0.0.1") => 
+lerna(verbose) GitUtilities.addTag           ("v0.0.1")
+lerna(verbose) GitUtilities.addTag           ("v0.0.1") => 
+lerna(info)    Publishing packages to npm...
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.add/scripts/prepublish.js")
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.add/scripts/prepublish.js") => false
+lerna(verbose) No prepublish script found at /Users/mars/labs/lerna-demo/packages/lurni.add/scripts/prepublish.js
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.sub/scripts/prepublish.js")
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.sub/scripts/prepublish.js") => false
+lerna(verbose) No prepublish script found at /Users/mars/labs/lerna-demo/packages/lurni.sub/scripts/prepublish.js
+lerna(verbose) Publishing lurni.add...
+lerna(verbose) NpmUtilities.publishTaggedInDir("lerna-temp", "./packages/lurni.add", )
+lerna(verbose) Publishing lurni.sub...
+lerna(verbose) NpmUtilities.publishTaggedInDir("lerna-temp", "./packages/lurni.sub", )
+lerna(verbose) NpmUtilities.publishTaggedInDir("lerna-temp", "./packages/lurni.add", ) => "+ lurni.add@0.0.1\n"
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.add/scripts/postpublish.js")
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.add/scripts/postpublish.js") => false
+lerna(verbose) No postpublish script found at /Users/mars/labs/lerna-demo/packages/lurni.add/scripts/postpublish.js
+lerna(verbose) NpmUtilities.publishTaggedInDir("lerna-temp", "./packages/lurni.sub", ) => "+ lurni.sub@0.0.1\n"
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.sub/scripts/postpublish.js")
+lerna(verbose) FileSystemUtilities.existsSync("./packages/lurni.sub/scripts/postpublish.js") => false
+lerna(verbose) No postpublish script found at /Users/mars/labs/lerna-demo/packages/lurni.sub/scripts/postpublish.js
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.add", "lerna-temp", )
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.add", "lerna-temp", ) => true
+lerna(verbose) NpmUtilities.removeDistTag    ("lurni.add", "lerna-temp", )
+lerna(verbose) NpmUtilities.removeDistTag    ("lurni.add", "lerna-temp", ) => 
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.add", "0.0.1", "latest", )
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.add", "0.0.1", "latest", ) => 
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.sub", "lerna-temp", )
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.sub", "lerna-temp", ) => true
+lerna(verbose) NpmUtilities.removeDistTag    ("lurni.sub", "lerna-temp", )
+lerna(verbose) NpmUtilities.removeDistTag    ("lurni.sub", "lerna-temp", ) => 
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.sub", "0.0.1", "latest", )
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.sub", "0.0.1", "latest", ) => 
+lerna(info)    Pushing tags to git...
+lerna(verbose) GitUtilities.pushWithTags     ("origin", ["v0.0.1"])
+lerna(verbose) GitUtilities.getCurrentBranch ()
+lerna(verbose) GitUtilities.getCurrentBranch () => "master"
+lerna(error)   GitUtilities.pushWithTags     ("origin", ["v0.0.1"])
+    Error: Command failed: git push origin master
+    fatal: 'origin' does not appear to be a git repository
+    fatal: Could not read from remote repository.
+    
+    Please make sure you have the correct access rights
+    and the repository exists.
+    
+        at checkExecSyncError (child_process.js:490:13)
+        at Object.execSync (child_process.js:530:13)
+        at Function.execSync (/Users/mars/.yarn-config/global/node_modules/lerna/lib/ChildProcessUtilities.js:67:38)
+        at pushWithTags (/Users/mars/.yarn-config/global/node_modules/lerna/lib/GitUtilities.js:117:39)
+        at Function.descriptor.value (/Users/mars/.yarn-config/global/node_modules/lerna/lib/logger.js:146:33)
+        at /Users/mars/.yarn-config/global/node_modules/lerna/lib/commands/PublishCommand.js:207:36
+        at /Users/mars/.yarn-config/global/node_modules/lerna/lib/commands/PublishCommand.js:532:9
+        at /Users/mars/.yarn-config/global/node_modules/async/lib/async.js:726:13
+        at /Users/mars/.yarn-config/global/node_modules/async/lib/async.js:52:16
+        at /Users/mars/.yarn-config/global/node_modules/async/lib/async.js:269:32
+lerna(error)   Error updating version as latest
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.sub", "lerna-temp", )
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.sub", "lerna-temp", ) => false
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.sub", "0.0.1", "latest", )
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.sub", "0.0.1", "latest", ) => 
+lerna(info)    Pushing tags to git...
+lerna(verbose) GitUtilities.pushWithTags     ("origin", ["v0.0.1"])
+lerna(verbose) GitUtilities.getCurrentBranch ()
+lerna(verbose) GitUtilities.getCurrentBranch () => "master"
+lerna(error)   GitUtilities.pushWithTags     ("origin", ["v0.0.1"])
+lerna(error)   Error updating version as latest
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.sub", "lerna-temp", )
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.sub", "lerna-temp", ) => false
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.sub", "0.0.1", "latest", )
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.sub", "0.0.1", "latest", ) => 
+lerna(info)    Pushing tags to git...
+lerna(verbose) GitUtilities.pushWithTags     ("origin", ["v0.0.1"])
+lerna(verbose) GitUtilities.getCurrentBranch ()
+lerna(verbose) GitUtilities.getCurrentBranch () => "master"
+lerna(error)   GitUtilities.pushWithTags     ("origin", ["v0.0.1"])
+lerna(error)   Error updating version as latest
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.sub", "lerna-temp", )
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.sub", "lerna-temp", ) => false
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.sub", "0.0.1", "latest", )
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.sub", "0.0.1", "latest", ) => 
+lerna(info)    Pushing tags to git...
+lerna(verbose) GitUtilities.pushWithTags     ("origin", ["v0.0.1"])
+lerna(verbose) GitUtilities.getCurrentBranch ()
+lerna(verbose) GitUtilities.getCurrentBranch () => "master"
+lerna(error)   GitUtilities.pushWithTags     ("origin", ["v0.0.1"])
+lerna(error)   Error updating version as latest
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.sub", "lerna-temp", )
+lerna(verbose) NpmUtilities.checkDistTag     ("lurni.sub", "lerna-temp", ) => false
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.sub", "0.0.1", "latest", )
+lerna(verbose) NpmUtilities.addDistTag       ("lurni.sub", "0.0.1", "latest", ) => 
+lerna(info)    Pushing tags to git...
+lerna(verbose) GitUtilities.pushWithTags     ("origin", ["v0.0.1"])
+lerna(verbose) GitUtilities.getCurrentBranch ()
+lerna(verbose) GitUtilities.getCurrentBranch () => "master"
+lerna(error)   GitUtilities.pushWithTags     ("origin", ["v0.0.1"])
+lerna(error)   Errored while running PublishCommand.execute
