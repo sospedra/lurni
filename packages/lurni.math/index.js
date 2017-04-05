@@ -1,4 +1,4 @@
 module.exports = {
-  add: require('../lurni.add'),
-  sub: require('../lurni.sub'),
+  add: require('lurni.add'),
+  sub: require('lurni.sub'),
 }
